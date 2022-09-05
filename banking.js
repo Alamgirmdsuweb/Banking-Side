@@ -2,6 +2,8 @@ let table = [];
 
 
 let DB;
+var email = location.search.split('name')[1]
+
 
 
 
@@ -111,11 +113,11 @@ function updateBalance(amount, isAdd) {
 document
     .getElementById("deposit-button")
     .addEventListener("click", function () {
-       
+        
         const depositAmount = getInputValue("deposit-input");
         if (depositAmount <= 0) return;
 
-       
+        var email =location.search.split('name')[1];
       
 
         const previousBalanceTotal = getCurrentBalance("deposit-input");
@@ -125,7 +127,7 @@ document
         const time = DateTime(depositAmount);
 
         const values = {
-            
+            Email:email,
             Type: "Deposit",
             Amount: depositAmount,
             Previous_Balance: previousBalanceTotal,

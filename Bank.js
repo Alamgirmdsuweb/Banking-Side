@@ -78,7 +78,8 @@ function Submit() {
             Time = DateTime();
 			addData();
 			
-            window.location.href = "Banking.html";
+            // window.location.href = "Banking.html";
+            window.location.href=`Banking.html?name${user[i].Email}`
             flag= true
          break;
             
